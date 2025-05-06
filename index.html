@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--  This site was created in Webflow. https://webflow.com  --><!--  Last Published: Tue May 06 2025 00:21:47 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  This site was created in Webflow. https://webflow.com  --><!--  Last Published: Tue May 06 2025 00:33:59 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="680f8dfc18edd53d6bf1ceab" data-wf-site="680f8dfb18edd53d6bf1cc4e">
 <head>
   <meta charset="utf-8">
@@ -201,7 +201,7 @@
             overflow-x: hidden;
             height: 100%;
         }
-        .hero {
+        .hero-prime {
             height: 100vh;
             width: 100%;
             min-height: -webkit-fill-available;
@@ -336,12 +336,12 @@
             text-decoration: none;
             display: inline-block;
         }
-        .btn-primary {
+        .btn-primary-hero {
             background: linear-gradient(45deg, #FFA500, #FF8C00);
             color: white;
             animation: fadeInUp 0.8s ease-out 1.4s forwards;
         }
-        .btn-secondary {
+        .btn-secondary-hero {
             background: rgba(255, 255, 255, 0.2);
             backdrop-filter: blur(10px);
             color: white;
@@ -355,10 +355,10 @@
         .btn-hero:active {
             transform: translateY(1px);
         }
-        .btn-primary:hover {
+        .btn-primary-hero:hover {
             background: linear-gradient(45deg, #FF8C00, #FFA500);
         }
-        .btn-secondary:hover {
+        .btn-secondary-hero:hover {
             background: rgba(255, 255, 255, 0.3);
         }
         @keyframes fadeIn {
@@ -387,7 +387,7 @@
             }
         }
         @media (max-width: 768px) {
-            .hero {
+            .hero-prime {
                 background-attachment: scroll;
                 padding: 15px;
             }
@@ -429,7 +429,7 @@
     </style>
       </head>
       <body>
-        <section class="hero">
+        <section class="hero-prime">
           <div class="hero-content">
             <div class="logo">Tudo De Bom Passeios</div>
             <h1>Aventure-se em Ilhabela</h1>
@@ -439,8 +439,8 @@
               <li>Viva experiências únicas em Ilhabela, onde a aventura e a natureza se encontram.</li>
             </ul>
             <div class="cta-buttons">
-              <a href="#reserva" class="btn-hero btn-primary">Reservar um Passeio</a>
-              <a href="#passeios" class="btn-hero btn-secondary">Ver Nossos Passeios</a>
+              <a href="#reserva" class="btn-hero btn-primary-hero">Reservar um Passeio</a>
+              <a href="#passeios" class="btn-hero btn-secondary-hero">Ver Nossos Passeios</a>
             </div>
           </div>
         </section>
@@ -954,64 +954,64 @@
     </body>
     </html>
   </div>
-  <div class="div-block-4">
-    <h3 class="heading">Conheca mais de perto as praias da Ilhabela</h3>
-    <div class="div-block-2"></div>
+  <div class="div-block-heading-videos">
+    <h3 class="heading-videos">Conheca mais de perto as praias da Ilhabela</h3>
+    <div class="div-renglon"></div>
   </div>
-  <div class="w-embed w-iframe w-script">
-    <div class="video-carousel-container">
-      <div class="video-carousel">
-        <div class="video-slide active">
-          <div class="video-wrapper">
+  <div class="embed-videos w-embed w-iframe w-script">
+    <div class="sc-video-carousel-container">
+      <div class="sc-video-carousel">
+        <div class="sc-video-slide sc-active">
+          <div class="sc-video-wrapper">
             <iframe src="https://player.vimeo.com/video/1081638891?autoplay=0&loop=1&title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen" allowfullscreen=""></iframe>
           </div>
         </div>
-        <div class="video-slide">
-          <div class="video-wrapper">
+        <div class="sc-video-slide">
+          <div class="sc-video-wrapper">
             <iframe src="https://player.vimeo.com/video/1081664372?autoplay=0&loop=1&title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen" allowfullscreen=""></iframe>
           </div>
         </div>
-        <div class="video-slide">
-          <div class="video-wrapper">
+        <div class="sc-video-slide">
+          <div class="sc-video-wrapper">
             <iframe src="https://player.vimeo.com/video/1081667828?autoplay=0&loop=1&title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen" allowfullscreen=""></iframe>
           </div>
         </div>
       </div>
-      <div class="carousel-controls">
-        <button class="prev-btn" aria-label="Previous video">‹</button>
-        <div class="dots-container"></div>
-        <button class="next-btn" aria-label="Next video">›</button>
+      <div class="sc-carousel-controls">
+        <button class="sc-prev-btn" aria-label="Previous video">‹</button>
+        <div class="sc-dots-container"></div>
+        <button class="sc-next-btn" aria-label="Next video">›</button>
       </div>
     </div>
     <style>
-.video-carousel-container {
+.sc-video-carousel-container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
   position: relative;
 }
-.video-carousel {
+.sc-video-carousel {
   position: relative;
   width: 100%;
   overflow: hidden;
   border-radius: 12px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
-.video-slide {
+.sc-video-slide {
   display: none;
   width: 100%;
   transition: opacity 0.5s ease;
 }
-.video-slide.active {
+.sc-video-slide.sc-active {
   display: block;
 }
-.video-wrapper {
+.sc-video-wrapper {
   position: relative;
-  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+  padding-bottom: 56.25%;
   height: 0;
   overflow: hidden;
 }
-.video-wrapper iframe {
+.sc-video-wrapper iframe {
   position: absolute;
   top: 0;
   left: 0;
@@ -1019,14 +1019,14 @@
   height: 100%;
   border: none;
 }
-.carousel-controls {
+.sc-carousel-controls {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 20px;
   gap: 20px;
 }
-.prev-btn, .next-btn {
+.sc-prev-btn, .sc-next-btn {
   background: #FF8C00;
   color: white;
   border: none;
@@ -1037,15 +1037,15 @@
   cursor: pointer;
   transition: all 0.3s ease;
 }
-.prev-btn:hover, .next-btn:hover {
+.sc-prev-btn:hover, .sc-next-btn:hover {
   background: #FFA500;
   transform: scale(1.1);
 }
-.dots-container {
+.sc-dots-container {
   display: flex;
   gap: 10px;
 }
-.dot {
+.sc-dot {
   width: 12px;
   height: 12px;
   border-radius: 50%;
@@ -1053,18 +1053,18 @@
   cursor: pointer;
   transition: all 0.3s ease;
 }
-.dot.active {
+.sc-dot.sc-active {
   background: #FF8C00;
   transform: scale(1.2);
 }
 @media (max-width: 768px) {
-  .video-carousel-container {
+  .sc-video-carousel-container {
     padding: 10px;
   }
-  .carousel-controls {
+  .sc-carousel-controls {
     margin-top: 15px;
   }
-  .prev-btn, .next-btn {
+  .sc-prev-btn, .sc-next-btn {
     width: 35px;
     height: 35px;
     font-size: 18px;
@@ -1073,52 +1073,44 @@
 </style>
     <script>
 document.addEventListener('DOMContentLoaded', function() {
-  const slides = document.querySelectorAll('.video-slide');
-  const dotsContainer = document.querySelector('.dots-container');
-  const prevBtn = document.querySelector('.prev-btn');
-  const nextBtn = document.querySelector('.next-btn');
+  const slides = document.querySelectorAll('.sc-video-slide');
+  const dotsContainer = document.querySelector('.sc-dots-container');
+  const prevBtn = document.querySelector('.sc-prev-btn');
+  const nextBtn = document.querySelector('.sc-next-btn');
   let currentIndex = 0;
   // Inicializa os dots
   slides.forEach((_, index) => {
     const dot = document.createElement('div');
-    dot.classList.add('dot');
-    if (index === 0) dot.classList.add('active');
+    dot.classList.add('sc-dot');
+    if (index === 0) dot.classList.add('sc-active');
     dot.addEventListener('click', () => {
       goToSlide(index);
     });
     dotsContainer.appendChild(dot);
   });
-  // Vai para um slide específico
   function goToSlide(index) {
-    // Pausa o vídeo atual antes de mudar
     const currentIframe = slides[currentIndex].querySelector('iframe');
     if (currentIframe) {
       const player = new Vimeo.Player(currentIframe);
       player.pause();
     }
-    // Atualiza o slide atual
-    slides[currentIndex].classList.remove('active');
+    slides[currentIndex].classList.remove('sc-active');
     currentIndex = index;
-    slides[currentIndex].classList.add('active');
-    // Atualiza os dots
-    document.querySelectorAll('.dot').forEach((dot, i) => {
-      dot.classList.toggle('active', i === currentIndex);
+    slides[currentIndex].classList.add('sc-active');
+    document.querySelectorAll('.sc-dot').forEach((dot, i) => {
+      dot.classList.toggle('sc-active', i === currentIndex);
     });
   }
-  // Próximo slide
   function nextSlide() {
     const newIndex = (currentIndex + 1) % slides.length;
     goToSlide(newIndex);
   }
-  // Slide anterior
   function prevSlide() {
     const newIndex = (currentIndex - 1 + slides.length) % slides.length;
     goToSlide(newIndex);
   }
-  // Event listeners
   nextBtn.addEventListener('click', nextSlide);
   prevBtn.addEventListener('click', prevSlide);
-  // Carrega a API Vimeo
   const vimeoScript = document.createElement('script');
   vimeoScript.src = 'https://player.vimeo.com/api/player.js';
   document.body.appendChild(vimeoScript);
