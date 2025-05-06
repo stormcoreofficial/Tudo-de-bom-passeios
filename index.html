@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--  This site was created in Webflow. https://webflow.com  --><!--  Last Published: Tue May 06 2025 00:33:59 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  This site was created in Webflow. https://webflow.com  --><!--  Last Published: Tue May 06 2025 13:09:03 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="680f8dfc18edd53d6bf1ceab" data-wf-site="680f8dfb18edd53d6bf1cc4e">
 <head>
   <meta charset="utf-8">
@@ -30,7 +30,6 @@
         <div class="navbar-wrapper">
           <a href="index.html" aria-current="page" class="navbar-brand w-nav-brand w--current"><img src="images/Logotipos.svg" loading="lazy" width="70" alt="" class="image-3">
             <div class="text-block-2">Tudo De Bom</div>
-            <div class="text-block-2 down">Passeios</div>
           </a>
           <nav role="navigation" class="nav-menu-wrapper w-nav-menu">
             <ul role="list" class="nav-menu w-list-unstyled">
@@ -182,286 +181,30 @@
     </div>
   </div>
   <section id="hero" class="section-hero">
-    <div class="code-embed-2 w-embed w-script">
-      <!DOCTYPE html>
-      <html lang="pt-br">
-      <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Tudo De Bom Passeios - Ilhabela</title>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-        <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Montserrat', sans-serif;
-            overflow-x: hidden;
-            height: 100%;
-        }
-        .hero-prime {
-            height: 100vh;
-            width: 100%;
-            min-height: -webkit-fill-available;
-            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
-                        url('https://cdn.prod.website-files.com/680f8dfb18edd53d6bf1cc4e/6810f03d043133de3d34d702_ilhabela-229-c.jpg');
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            position: relative;
-            overflow: hidden;
-        }
-        .hero-content {
-            max-width: 800px;
-            width: 100%;
-            z-index: 2;
-            opacity: 0;
-            animation: fadeIn 1.5s ease-out forwards;
-            margin-bottom: 20px;
-            background-color: rgba(0, 0, 0, 0.5);
-            padding: 25px;
-            border-radius: 10px;
-            box-sizing: border-box;
-        }
-        .logo {
-            font-size: clamp(1.5rem, 6vw, 2rem);
-            font-weight: 600;
-            margin-bottom: 15px;
-            color: #FFD700;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-            letter-spacing: 1px;
-            line-height: 1.3;
-            padding: 0 10px;
-        }
-        h1 {
-            font-size: clamp(2rem, 8vw, 3.5rem);
-            margin-bottom: 25px;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-            color: white;
-            font-weight: 700;
-            position: relative;
-            overflow: hidden;
-            padding-bottom: 15px;
-            opacity: 0;
-            animation: fadeInUp 1s ease-out 0.3s forwards;
-            line-height: 1.2;
-        }
-        h1::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 100px;
-            height: 3px;
-            background: #FFD700;
-            animation: lineExpand 1s ease-out 0.8s forwards;
-        }
-        .feature-list {
-            list-style: none;
-            margin-bottom: 30px;
-            text-align: left;
-            display: inline-block;
-            width: 100%;
-            padding: 0 10px;
-        }
-        .feature-list li {
-            position: relative;
-            padding-left: 30px;
-            margin-bottom: 15px;
-            font-size: clamp(1rem, 4vw, 1.1rem);
-            line-height: 1.6;
-            opacity: 0;
-            transform: translateX(-20px);
-            font-weight: 400;
-            text-align: left;
-            animation: slideInRight 0.8s ease-out forwards;
-        }
-        .feature-list li::before {
-            content: '✓';
-            position: absolute;
-            left: 5px;
-            color: #FFD700;
-            font-weight: bold;
-        }
-        .feature-list li:nth-child(1) {
-            animation-delay: 0.5s;
-            font-weight: 600;
-            font-size: clamp(1.1rem, 5vw, 1.3rem);
-            color: #FFD700;
-        }
-        .feature-list li:nth-child(2) {
-            animation-delay: 0.8s;
-        }
-        .feature-list li:nth-child(3) {
-            animation-delay: 1.1s;
-        }
-        .cta-buttons {
-            display: flex;
-            gap: 15px;
-            margin-top: 25px;
-            flex-wrap: wrap;
-            justify-content: center;
-            width: 100%;
-        }
-        .btn-hero {
-            padding: 12px 25px;
-            border-radius: 50px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            border: none;
-            font-size: clamp(0.8rem, 3.5vw, 0.9rem);
-            position: relative;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            opacity: 0;
-            transform: translateY(20px);
-            flex: 1;
-            min-width: 200px;
-            max-width: 100%;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-        }
-        .btn-primary-hero {
-            background: linear-gradient(45deg, #FFA500, #FF8C00);
-            color: white;
-            animation: fadeInUp 0.8s ease-out 1.4s forwards;
-        }
-        .btn-secondary-hero {
-            background: rgba(255, 255, 255, 0.2);
-            backdrop-filter: blur(10px);
-            color: white;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            animation: fadeInUp 0.8s ease-out 1.6s forwards;
-        }
-        .btn-hero:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-        }
-        .btn-hero:active {
-            transform: translateY(1px);
-        }
-        .btn-primary-hero:hover {
-            background: linear-gradient(45deg, #FF8C00, #FFA500);
-        }
-        .btn-secondary-hero:hover {
-            background: rgba(255, 255, 255, 0.3);
-        }
-        @keyframes fadeIn {
-            to {
-                opacity: 1;
-            }
-        }
-        @keyframes fadeInUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        @keyframes slideInRight {
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-        @keyframes lineExpand {
-            0% {
-                width: 0;
-            }
-            100% {
-                width: 100px;
-            }
-        }
-        @media (max-width: 768px) {
-            .hero-prime {
-                background-attachment: scroll;
-                padding: 15px;
-            }
-            .hero-content {
-                padding: 20px 15px;
-                margin-bottom: 10px;
-            }
-            h1 {
-                margin-bottom: 20px;
-            }
-            .feature-list {
-                margin-bottom: 20px;
-            }
-            .feature-list li {
-                margin-bottom: 12px;
-                padding-left: 25px;
-            }
-            .cta-buttons {
-                flex-direction: column;
-                gap: 12px;
-            }
-            .btn-hero {
-                width: 100%;
-                max-width: 100%;
-                padding: 12px;
-            }
-        }
-        @media (max-width: 480px) {
-            .hero-content {
-                padding: 15px 10px;
-            }
-            .logo {
-                margin-bottom: 10px;
-            }
-            h1::after {
-                width: 80px;
-            }
-        }
-    </style>
-      </head>
-      <body>
-        <section class="hero-prime">
-          <div class="hero-content">
-            <div class="logo">Tudo De Bom Passeios</div>
-            <h1>Aventure-se em Ilhabela</h1>
-            <ul class="feature-list">
-              <li>Aventuras Inesquecíveis de Jeep e Lancha</li>
-              <li>Explore as paisagens mais deslumbrantes da ilha em passeios emocionantes.</li>
-              <li>Viva experiências únicas em Ilhabela, onde a aventura e a natureza se encontram.</li>
-            </ul>
-            <div class="cta-buttons">
-              <a href="#reserva" class="btn-hero btn-primary-hero">Reservar um Passeio</a>
-              <a href="#passeios" class="btn-hero btn-secondary-hero">Ver Nossos Passeios</a>
-            </div>
-          </div>
-        </section>
-        <script>
-        window.addEventListener('scroll', function() {
-            const scrollPosition = window.pageYOffset;
-            const hero = document.querySelector('.hero');
-            hero.style.backgroundPositionY = scrollPosition * 0.5 + 'px';
-        });
-        function adjustHeroHeight() {
-            const hero = document.querySelector('.hero');
-            hero.style.height = window.innerHeight + 'px';
-        }
-        window.addEventListener('resize', adjustHeroHeight);
-        window.addEventListener('load', adjustHeroHeight);
-    </script>
-      </body>
-      </html>
+    <div class="div-block"><img class="image-9" src="images/WhatsApp-Image-2025-05-02-at-22.50.53_6ce65107.jpg" width="89" alt="" style="opacity:0" sizes="88.98809814453125px" data-w-id="d862f315-fbd0-084f-444f-d61358e87d9b" loading="lazy" srcset="images/WhatsApp-Image-2025-05-02-at-22.50.53_6ce65107-p-500.jpg 500w, images/WhatsApp-Image-2025-05-02-at-22.50.53_6ce65107-p-800.jpg 800w, images/WhatsApp-Image-2025-05-02-at-22.50.53_6ce65107.jpg 1024w">
+      <h2 class="heading-2">Tudo De Bom Passeios</h2>
+      <div class="div-block-5">
+        <h1 data-w-id="7ba6eb4a-f3db-6cf4-1197-54995cccf319" style="opacity:0" class="heading">Aventure-se em Ilhabela</h1>
+        <div class="div-block-4"></div>
+      </div>
+      <div class="div-block-3">
+        <div data-w-id="986e58c4-ae11-53da-d815-8ff7925700c6" style="opacity:0" class="div-text-hero"><img src="images/Design-sem-nome.gif" loading="lazy" width="52" alt="" class="image-10">
+          <div class="text-block-6">Aventuras Inesquecíveis de <strong>Jeep </strong>e <strong>Lancha</strong></div>
+        </div>
+        <div class="div-text-hero"><img src="images/Design-sem-nome.gif" loading="lazy" width="52" alt="" class="image-11">
+          <div data-w-id="cedd787d-8f1c-dde2-6a1a-b990a21eb81c" style="opacity:0" class="text-block-5 midle">Explore as paisagens mais deslumbrantes da ilha em <strong>passeios emocionantes</strong>.</div>
+        </div>
+        <div class="div-text-hero"><img src="images/Design-sem-nome.gif" loading="lazy" width="52" alt="" class="image-12">
+          <div data-w-id="6e2b8e73-9150-8145-90da-0d53b1ef4072" style="opacity:0" class="text-block-5">Viva experiências únicas em <strong>Ilhabela</strong>, onde a aventura e a natureza se encontram.</div>
+        </div>
+      </div>
+      <div data-w-id="75e7cd62-44ba-4920-6655-8a7214ddb092" style="opacity:0" class="div-block-2">
+        <a href="#reserva" class="button-hero-unique left w-button">Reservar um passeio</a>
+        <a href="#passeios" class="button-hero-unique right w-button">Ver nossos passeios</a>
+      </div>
     </div>
   </section>
-  <section id="passeios" class="section-passeios"><img src="images/WhatsApp-Image-2025-05-02-at-22.50.53_6ce65107.jpg" loading="lazy" width="90" sizes="90px" alt="" srcset="images/WhatsApp-Image-2025-05-02-at-22.50.53_6ce65107-p-500.jpg 500w, images/WhatsApp-Image-2025-05-02-at-22.50.53_6ce65107-p-800.jpg 800w, images/WhatsApp-Image-2025-05-02-at-22.50.53_6ce65107.jpg 1024w" class="image-8">
+  <section id="passeios" class="section-passeios">
     <div class="embed-passeios w-embed w-script">
       <!DOCTYPE html>
       <html lang="pt-BR">
@@ -696,7 +439,7 @@
           <!--  Passeio 3  -->
           <div class="tour-card">
             <div class="tour-img">
-              <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Lancha para Praias">
+              <img src="images/caption.jpg" alt="Lancha para Praias">
             </div>
             <div class="tour-content">
               <h3>Lancha para Castelhanos</h3>
