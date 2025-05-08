@@ -78,7 +78,8 @@
 }
 
 .nav-link-4:hover {
-  color: var(--main);
+  border-bottom: 1px solid #ee9b00;
+  font-weight: 700;
 }
 
 .nav-link-4.w--current {
@@ -203,11 +204,11 @@
 }
 
 .section-hero {
-  background-image: url('../images/photo-1505118380757-91f5f5632de0.avif');
-  background-position: 50%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
+  background-image: linear-gradient(#0000008c, #0000008c), url('../images/photo-1505118380757-91f5f5632de0.avif');
+  background-position: 0 0, 50%;
+  background-repeat: repeat, no-repeat;
+  background-size: auto, cover;
+  background-attachment: scroll, fixed;
   flex-flow: column;
   justify-content: center;
   align-items: center;
@@ -247,7 +248,7 @@
 .div-block {
   grid-column-gap: 2vw;
   grid-row-gap: 2vw;
-  background-color: #0000008c;
+  background-color: #0000;
   border-radius: 20px;
   flex-flow: column;
   justify-content: space-between;
@@ -329,13 +330,15 @@
 
 .heading-2 {
   color: var(--tudodebom);
+  text-shadow: 0 1px 20px #ed5f00;
   margin-top: 0;
   margin-bottom: 0;
   padding: 4px 20px;
-  display: none;
 }
 
 .div-text-hero {
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
   justify-content: flex-start;
   align-items: center;
   display: flex;
@@ -402,6 +405,46 @@
 .image-9 {
   box-shadow: 17px 13px 50px 0 #ea2700, -13px -5px 50px 0 var(--main);
   border-radius: 10px;
+  display: none;
+}
+
+.button-2 {
+  position: fixed;
+  inset: auto auto 3vw 3vw;
+}
+
+.link-block-2 {
+  background-color: #fff;
+  border-radius: 20px;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  text-decoration: none;
+  transition: all .2s ease-in-out;
+  display: flex;
+  position: fixed;
+  inset: auto auto 3vw 3vw;
+  box-shadow: 0 2px 5px #0000007a;
+}
+
+.link-block-2:hover {
+  background-color: #c3fffe;
+  transform: scale(1.1);
+}
+
+.text-block-7 {
+  color: #434343;
+  margin-left: 5px;
+  margin-right: 5px;
+  font-family: Exo, sans-serif;
+  font-weight: 700;
+}
+
+.background-video {
+  z-index: 2;
+  border-radius: 1000px;
+  width: 100px;
+  height: 100px;
 }
 
 @media screen and (min-width: 1280px) {
@@ -561,8 +604,8 @@
   }
 
   .div-block {
-    grid-column-gap: 9vw;
-    grid-row-gap: 9vw;
+    grid-column-gap: 40px;
+    grid-row-gap: 40px;
     padding-top: 4vw;
     padding-bottom: 4vw;
   }
@@ -576,7 +619,7 @@
     line-height: 5vw;
   }
 
-  .heading {
+  .heading, .heading-2 {
     font-size: 6vw;
     line-height: 6vw;
   }
@@ -610,7 +653,11 @@
   }
 
   .image-10, .image-11, .image-12 {
-    width: 40px;
+    width: 20px;
+  }
+
+  .text-block-7 {
+    display: none;
   }
 }
 
